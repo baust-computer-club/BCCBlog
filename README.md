@@ -1,4 +1,4 @@
-# 📚 Readers Hub — BAUST Computer Club (BCC)
+# 📚 BCCBlog — A BAUST Computer Club Wing
 
 > A modern, high-performance web application designed for students, teachers, and researchers to explore curated technical articles, academic innovations, and blog posts.
 

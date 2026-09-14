@@ -34,7 +34,7 @@
   }
 
   // --- Google Sheets JSONP & CSV Loaders ---
-  const GOOGLE_SHEET_RAW_CSV_URL = 'https://docs.google.com/spreadsheets/d/1DosGeXz-sXt5TM-o9oZH92-ETsPEAelJ9Jw-cNS4oQU/export?format=csv';
+  const GOOGLE_SHEET_RAW_CSV_URL = 'https://docs.google.com/spreadsheets/d/136cisUVqdCY4-hHKN23Ofhcym_QjH2Kcby6fVA-446s/export?format=csv';
 
   function parseCSV(text) {
     const lines = [];
@@ -126,7 +126,7 @@
       };
 
       const script = document.createElement('script');
-      script.src = `https://docs.google.com/spreadsheets/d/1DosGeXz-sXt5TM-o9oZH92-ETsPEAelJ9Jw-cNS4oQU/gviz/tq?tqx=responseHandler:${callbackName}`;
+      script.src = `https://docs.google.com/spreadsheets/d/136cisUVqdCY4-hHKN23Ofhcym_QjH2Kcby6fVA-446s/gviz/tq?tqx=responseHandler:${callbackName}`;
       script.onerror = (err) => {
         clearTimeout(timeoutId);
         delete window[callbackName];
@@ -297,7 +297,7 @@
         date: formatDateString(rawDate),
         author: author,
         description: item.Description || item.description || '',
-        content: item['total article'] || item['Total article'] || item.total_article || item.content || item.Description || ''
+        content: item['Full Article'] || item['total article'] || item['Total article'] || item.total_article || item.content || item.Description || ''
       };
     });
   }

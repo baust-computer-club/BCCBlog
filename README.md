@@ -1,4 +1,4 @@
-# 📚 BCCBlog — A BAUST Computer Club 
+# 📚 BCCBlog — BAUST Computer Club 
 
 > A modern, high-performance web application designed for students, teachers, and researchers to explore curated technical articles, academic innovations, and blog posts.
 

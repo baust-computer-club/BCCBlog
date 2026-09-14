@@ -563,14 +563,6 @@
     authorByline.className = 'card-author-wrapper';
     authorByline.innerHTML = formatAuthorBylineHTML(article.author);
 
-    // Single Category Badge (ONLY 1 CATEGORY PER TITLE)
-    const catContainer = document.createElement('div');
-    catContainer.className = 'card-categories';
-    const catBadge = document.createElement('span');
-    const normalizedCat = article.category.toLowerCase().replace(/\s+/g, '-');
-    catBadge.className = `cat-badge ${normalizedCat} default`;
-    catBadge.textContent = article.category;
-    catContainer.appendChild(catBadge);
 
     // Description
     const desc = document.createElement('p');
@@ -593,7 +585,6 @@
     const topWrapper = document.createElement('div');
     topWrapper.appendChild(cardTop);
     topWrapper.appendChild(authorByline); // Author details
-    topWrapper.appendChild(catContainer); // Single category badge
     topWrapper.appendChild(desc);
 
     card.appendChild(topWrapper);

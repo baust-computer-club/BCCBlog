@@ -243,6 +243,87 @@ body {
 [data-theme="dark"] .icon-sun { display: block; }
 [data-theme="dark"] .icon-moon { display: none; }
 
+/* Navigation Menu Wrapper */
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Mobile Header Controls */
+.mobile-header-controls {
+  display: none;
+}
+
+.hamburger-btn {
+  background: var(--pill-try-bg);
+  border: 1px solid var(--border-light);
+  color: var(--text-heading);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  border-color: #006D3A;
+  color: #006D3A;
+}
+
+/* Mobile Responsive */
+@media (max-width: 860px) {
+  .mobile-header-controls {
+    display: block;
+  }
+
+  .nav-menu-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-light);
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-menu-wrapper.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-author-categories {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .author-cat-nav-btn, .author-cat-nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 65vh;
@@ -1121,4 +1202,19 @@ body {
 .article-author-byline .author-details-text {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+/* Additional Mobile Responsiveness */
+@media (max-width: 860px) {
+  .article-main-title {
+    font-size: 2rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .article-author-byline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 }
